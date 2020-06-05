@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_op1"
+            android:icon="@drawable/m1"
+            android:title="个人资料"
+            />
+        <item
+            android:id="@+id/nav_op2"
+            android:icon="@drawable/m3"
+            android:title="个人资料"
+            />
+        <item
+            android:id="@+id/nav_op3"
+            android:icon="@color/colorPrimary"
+            android:title="个人资料"
+            />
+    </group>
+</menu>
