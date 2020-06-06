@@ -43,7 +43,9 @@ public class rightframe extends Fragment {
         LoopViewPage loopViewPage=new LoopViewPage(imageList);
         ViewPager viewPager=view.findViewById(R.id.loopview_page);
         viewPager.setAdapter(loopViewPage);
+
         return view;
     }
+
 
 }
