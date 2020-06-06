@@ -33,7 +33,7 @@ public class LoopViewPage extends PagerAdapter {
 
     @Override
     public int getCount() {
-        return Integer.MAX_VALUE;
+        return imageViews.size();
     }
 
     @Override

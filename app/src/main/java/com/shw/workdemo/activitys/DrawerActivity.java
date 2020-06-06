@@ -38,7 +38,8 @@ public class DrawerActivity extends AppCompatActivity {
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
         navigationView.setCheckedItem(R.id.nav_op1);
-        replaceFragment(new rightframe());
+        rightframe r=new rightframe(DrawerActivity.this);
+        replaceFragment(r);
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -46,10 +47,9 @@ public class DrawerActivity extends AppCompatActivity {
                 return true;
             }
         });
-    }
-    private void loopViewPager(){
 
     }
+
     private void replaceFragment(Fragment fragment){
         FragmentManager fragmentManager=getSupportFragmentManager();
         FragmentTransaction transaction=fragmentManager.beginTransaction();
