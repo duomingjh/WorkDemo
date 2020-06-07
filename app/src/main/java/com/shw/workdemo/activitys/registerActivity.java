@@ -2,7 +2,9 @@ package com.shw.workdemo.activitys;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ContentValues;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -10,8 +12,10 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.shw.workdemo.Bean.user;
 import com.shw.workdemo.R;
 import com.shw.workdemo.Tools.SharedpreferenceHelper;
+import com.shw.workdemo.Tools.dbHelper;
 
 public class registerActivity extends AppCompatActivity {
     private EditText user;

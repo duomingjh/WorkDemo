@@ -13,18 +13,24 @@ import androidx.viewpager.widget.ViewPager;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
+import com.shw.workdemo.Bean.user;
 import com.shw.workdemo.Frame.rightframe;
 import com.shw.workdemo.R;
+import com.shw.workdemo.Tools.dbTool;
 
 import java.util.ArrayList;
 
+import static com.shw.workdemo.Tools.dbTool.selectuser;
+
 public class DrawerActivity extends AppCompatActivity {
-    private ViewPager viewPager;
     private DrawerLayout drawerLayout;
-    private ArrayList<ImageView> imagelist;
-    private int[] imgs;
+    private String username;
+    private TextView nameTv;
+    private TextView tallTv;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,6 +42,7 @@ public class DrawerActivity extends AppCompatActivity {
         NavigationView navigationView=findViewById(R.id.nav_view);
         if(actionBar!=null){
             actionBar.setDisplayHomeAsUpEnabled(true);
+            actionBar.setTitle("首页");
         }
         navigationView.setCheckedItem(R.id.nav_op1);
         rightframe r=new rightframe(DrawerActivity.this);
@@ -67,6 +74,10 @@ public class DrawerActivity extends AppCompatActivity {
     }
 
     private void init(){
+        username=getIntent().getStringExtra("username");
+        user s= dbTool.selectuser(this,"User.db",1,username);
         drawerLayout=findViewById(R.id.dr_layout);
+        nameTv=findViewById(R.id.user_name);
+        tallTv=findViewById(R.id.user_tall);
     }
 }

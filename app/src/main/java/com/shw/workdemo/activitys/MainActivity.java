@@ -10,6 +10,7 @@ import android.os.Message;
 import android.widget.TextView;
 
 import com.shw.workdemo.R;
+import com.shw.workdemo.Tools.dbHelper;
 
 public class MainActivity extends AppCompatActivity {
     private TextView textView; //
@@ -30,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         textView=findViewById(R.id.tv_main);
+        dbHelper db=new dbHelper(this,"User.db",null,1);
+        db.getReadableDatabase();
         new Thread(new Runnable() {
             @Override
             public void run() {
