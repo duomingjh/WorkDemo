@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="120dp">
+    <ImageView
+        android:id="@+id/news_imgas"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/new_image"/>
+
+    <TextView
+        android:id="@+id/news_title"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_marginLeft="120dp"
+        android:text="青年如何抓住海南自贸港建设红利"
+        android:textSize="18sp"
+        android:textColor="#87CEFA"/>
+    <TextView
+        android:id="@+id/newa_context"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="40dp"
+        android:text="《海南自由贸易港建设总体方案》提出11个方面39条具体政策，对年轻人而言，方案有哪些政策利好？"/>
+</RelativeLayout>
