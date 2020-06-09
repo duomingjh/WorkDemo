@@ -10,6 +10,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.ImageView;
@@ -35,22 +36,36 @@ public class DrawerActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_drawer);
-        init();
+
         androidx.appcompat.widget.Toolbar toolbar=findViewById(R.id.dr_bar);
         setSupportActionBar(toolbar);
         ActionBar actionBar=getSupportActionBar();
         NavigationView navigationView=findViewById(R.id.nav_view);
+        drawerLayout=findViewById(R.id.dr_layout);
+        nameTv=navigationView.getHeaderView(0).findViewById(R.id.user_name);
+        tallTv=navigationView.getHeaderView(0).findViewById(R.id.user_tall);
+        username=getIntent().getStringExtra("username");
+        user s= dbTool.selectuser(this,"User.db",1,username);
+        nameTv.setText(s.getName());
+        tallTv.setText(s.getSiginature());
+
         if(actionBar!=null){
             actionBar.setDisplayHomeAsUpEnabled(true);
             actionBar.setTitle("首页");
         }
-        navigationView.setCheckedItem(R.id.nav_op1);
+
         rightframe r=new rightframe(DrawerActivity.this);
         replaceFragment(r);
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                drawerLayout.closeDrawers();
+                switch (item.getItemId()){
+                    case R.id.nav_op1:
+                        Intent intent=new Intent(DrawerActivity.this,presiondataActivity.class);
+                        intent.putExtra("id",username);
+                        startActivity(intent);
+
+                }
                 return true;
             }
         });
@@ -74,10 +89,12 @@ public class DrawerActivity extends AppCompatActivity {
     }
 
     private void init(){
-        username=getIntent().getStringExtra("username");
-        user s= dbTool.selectuser(this,"User.db",1,username);
         drawerLayout=findViewById(R.id.dr_layout);
         nameTv=findViewById(R.id.user_name);
         tallTv=findViewById(R.id.user_tall);
+        username=getIntent().getStringExtra("username");
+        user s= dbTool.selectuser(this,"User.db",1,username);
+        nameTv.setText(s.getName());
+        tallTv.setText(s.getSiginature());
     }
 }

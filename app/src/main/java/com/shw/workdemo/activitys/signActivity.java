@@ -17,6 +17,7 @@ import com.shw.workdemo.Bean.user;
 import com.shw.workdemo.R;
 import com.shw.workdemo.Tools.SharedpreferenceHelper;
 import com.shw.workdemo.Tools.dbHelper;
+import com.shw.workdemo.Tools.dbTool;
 
 public class signActivity extends AppCompatActivity {
     private EditText user;
@@ -35,14 +36,9 @@ public class signActivity extends AppCompatActivity {
                 if(username!=null&&username.length()>=5&&userPass!=null&&userPass.length()>=4){
                     SharedpreferenceHelper.setSpHelper(signActivity.this,username+"name",username);
                     SharedpreferenceHelper.setSpHelper(signActivity.this,username+"pwd",userPass);
-                    dbHelper db=new dbHelper(signActivity.this,"User.db",null,1);
+                    dbHelper db=new dbHelper(signActivity.this,"User.db",null,2);
                     com.shw.workdemo.Bean.user user1=new user(username,"",userPass,"");
-                    SQLiteDatabase data=db.getWritableDatabase();
-                    ContentValues values=new ContentValues();
-                    values.put("id",user1.getId());
-                    values.put("passward",user1.getPassward());
-                    values.put("siginature",user1.getSiginature());
-                    data.insert("user",null,values);
+                    dbTool.userinsert(signActivity.this,"User.db",1,user1);
                     /*Intent intent=new Intent(signActivity.this,registerActivity.class);
                     startActivity(intent);*/
                     finish();
