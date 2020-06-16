@@ -19,7 +19,7 @@
         android:id="@+id/newsimg_detail"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:src="@drawable/new_image"/>
+        />
     <TextView
         android:id="@+id/newscontext_detail"
         android:layout_width="match_parent"

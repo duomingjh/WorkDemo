@@ -36,7 +36,7 @@ public class dbTool {
         dbHelper db=new dbHelper(context,"User.db",null,1);
         SQLiteDatabase data=db.getWritableDatabase();
         ContentValues values=new ContentValues();
-        values.put("name",u.getPassward());
+        values.put("name",u.getName());
         values.put("siginature",u.getSiginature());
         data.update("user",values,"id=?",new String[]{u.getId()});
 

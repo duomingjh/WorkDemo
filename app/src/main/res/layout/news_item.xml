@@ -7,15 +7,15 @@
         android:id="@+id/news_imgas"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:src="@drawable/new_image"/>
+        />
 
     <TextView
         android:id="@+id/news_title"
         android:layout_width="match_parent"
-        android:layout_height="36dp"
+        android:layout_height="38dp"
         android:layout_marginLeft="120dp"
-        android:text="青年如何抓住海南自贸港建设红利"
-        android:textSize="18sp"
+        android:text="青年如何抓住海南自贸港建设红利青年如何抓住海南自贸港建设红利"
+        android:textSize="14sp"
         android:textColor="#87CEFA"/>
     <TextView
         android:id="@+id/newa_context"

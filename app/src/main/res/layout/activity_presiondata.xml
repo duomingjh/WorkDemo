@@ -7,21 +7,21 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".activitys.presiondataActivity"
-    android:background="#FFFFE0">
+    android:background="@drawable/bg03">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@color/colorPrimaryDark"
         android:gravity="center"
         android:text="个人中心"
-        android:textColor="@android:color/white"
+
         android:textSize="20dp" />
     <RelativeLayout
         android:id="@+id/layout_mine_personal"
         android:layout_width="match_parent"
         android:layout_height="108dp"
         android:layout_marginTop="4dp"
-        android:background="#fff" >
+       >
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/circleimageview_mine_photo"
@@ -50,7 +50,7 @@
         android:layout_marginLeft="6dp"
         android:layout_marginRight="6dp"
         android:layout_marginTop="16dp"
-        android:background="#fff" >
+        >
 
         <TextView
             android:id="@+id/p_op1"
@@ -67,7 +67,7 @@
             android:layout_marginRight="-245dp"
 
             android:paddingLeft="12dp"
-            android:src="@drawable/jintou" />
+            />
     </RelativeLayout>
 
     <RelativeLayout
@@ -77,7 +77,7 @@
         android:layout_marginLeft="6dp"
         android:layout_marginRight="6dp"
         android:layout_marginTop="4dp"
-        android:background="#fff" >
+        >
 
         <TextView
             android:id="@+id/p_op2"
@@ -85,7 +85,7 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:paddingLeft="12dp"
-            android:text="打卡2" />
+            android:text="设置个性签名" />
 
         <ImageView
             android:layout_width="wrap_content"
@@ -94,7 +94,7 @@
             android:layout_marginRight="-245dp"
 
             android:paddingLeft="12dp"
-            android:src="@drawable/jintou" />
+            />
     </RelativeLayout>
 
     <RelativeLayout
@@ -104,7 +104,7 @@
         android:layout_marginLeft="6dp"
         android:layout_marginRight="6dp"
         android:layout_marginTop="4dp"
-        android:background="#fff" >
+       >
 
         <TextView
             android:id="@+id/p_oop3"
@@ -121,7 +121,7 @@
             android:layout_marginRight="-245dp"
 
             android:paddingLeft="12dp"
-            android:src="@drawable/jintou" />
+            />
     </RelativeLayout>
 
     <RelativeLayout
@@ -148,7 +148,7 @@
             android:layout_centerVertical="true"
             android:layout_marginRight="-245dp"
             android:paddingLeft="12dp"
-            android:src="@drawable/jintou" />
+             />
     </RelativeLayout>
 
 

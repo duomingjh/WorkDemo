@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/musci_image"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@drawable/bg05"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="热门音乐"
+        android:textSize="26sp"
+        android:textColor="@color/material_on_surface_disabled"
+        android:layout_marginTop="120dp"
+        android:layout_marginLeft="50dp"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/music_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/musci_image">
+    </androidx.recyclerview.widget.RecyclerView>
 
-</LinearLayout>
+</RelativeLayout>

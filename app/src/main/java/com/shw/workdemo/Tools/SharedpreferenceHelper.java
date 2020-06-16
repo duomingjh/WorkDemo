@@ -9,7 +9,6 @@ public class SharedpreferenceHelper {
         SharedPreferences.Editor editor=context.getSharedPreferences("data",Context.MODE_PRIVATE).edit();
         if(object instanceof String){
             editor.putString(key,((String)object));
-
         }if(object instanceof Float){
             editor.putFloat(key,((Float)object).floatValue());
         }

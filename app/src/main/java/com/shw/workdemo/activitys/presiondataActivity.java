@@ -46,4 +46,5 @@ public class presiondataActivity extends AppCompatActivity {
             textViewname.setText(u.getName()+"\n"+u.getSiginature());
     }
 
+
 }

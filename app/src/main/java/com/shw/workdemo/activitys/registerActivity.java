@@ -14,6 +14,7 @@ import android.widget.Toast;
 
 import com.shw.workdemo.Bean.user;
 import com.shw.workdemo.R;
+import com.shw.workdemo.Tools.GetcontextHpler;
 import com.shw.workdemo.Tools.SharedpreferenceHelper;
 import com.shw.workdemo.Tools.dbHelper;
 
@@ -40,11 +41,13 @@ public class registerActivity extends AppCompatActivity {
                 if(username!=null&&username.length()>3&&userPass!=null&&userPass.equals(pass)){
                     SharedpreferenceHelper.setSpHelper(registerActivity.this,"isrb",remeberpwd);
                     SharedpreferenceHelper.setSpHelper(registerActivity.this,"recentuser",username);
-                    Toast.makeText(registerActivity.this,"Success",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(registerActivity.this,"登录成功",Toast.LENGTH_SHORT).show();
                     Intent intent=new Intent(registerActivity.this,DrawerActivity.class);
                     intent.putExtra("username",username);
                     startActivity(intent);
                     finish();
+                }else {
+                    Toast.makeText(GetcontextHpler.getContext(),"密码或账户错误",Toast.LENGTH_SHORT).show();
                 }
             }
         });

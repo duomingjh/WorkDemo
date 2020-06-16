@@ -47,4 +47,14 @@ public class user {
     public void setSiginature(String siginature) {
         this.siginature = siginature;
     }
+
+    @Override
+    public String toString() {
+        return "user{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", passward='" + passward + '\'' +
+                ", siginature='" + siginature + '\'' +
+                '}';
+    }
 }

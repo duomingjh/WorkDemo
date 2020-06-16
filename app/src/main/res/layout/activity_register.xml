@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/rebg"
+    android:background="@drawable/bg02"
     tools:context=".activitys.registerActivity">
 
     <TextView
@@ -115,7 +115,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:background="#fE00f7"
+        android:background="@color/cardview_shadow_end_color"
         android:text="注册"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
